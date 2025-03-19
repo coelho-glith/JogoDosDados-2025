@@ -1,1 +1,4 @@
 # JogoDosDados
+```
+Primeira versão ainda.
+```
