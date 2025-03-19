@@ -25,7 +25,7 @@
                 int resultado = geradorDeNumeros.Next(1, 7);
 
                 Console.WriteLine("----------------------------------");
-                Console.WriteLine($"O valor sorteado foi: {resultado}! número bonito.");
+                Console.WriteLine($"O valor sorteado foi: {resultado}! número bonito!");
                 Console.WriteLine("----------------------------------");
 
                 Console.Write("Deseja continuar? (s/N) ");
