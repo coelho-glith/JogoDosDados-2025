@@ -1,32 +1,54 @@
 ﻿namespace JogoDosDados.ConsoleApp
 {
-    /** Versão 1 - Estrutura básica e simulação de dados
-      * Exibir um banner para o jogo de dados [x]
-      * Permitir que o usuário pressione Enter para lançar o dado
-      * Implementar a geração de números aleatórios para simular um dado (1-6) [x]
-      * Exibir o resultado do lançamento do dado  
+    /** Versão 2 - Controle de posição do jogador
+      * Armazenar a posição do jogador na pista e atualizar o valor após o lançamento do dado
+      * Exibir a posição atual do jogador na pista
+      * Definir a linha de chegada em 30 verificar se o jogador alcançou ou ultrapassou a linha de chegada
+      * Permitir o jogador realizar várias jogadas
     **/
     internal class Program
     {
         static void Main(string[] args)
         {
+            const int limiteLinhaChegada = 30;
+
             while (true)
             {
-                Console.Clear();
-                Console.WriteLine("----------------------------------");
-                Console.WriteLine("Jogo dos Dados Divertido");
-                Console.WriteLine("----------------------------------");
+                int posicaoJogador = 0;
+                bool jogoEmAndamento = true;
 
-                Console.Write("Pressione ENTER para lançar o dado...");
-                Console.ReadLine();
+                while (jogoEmAndamento)
+                {
+                    Console.Clear();
+                    Console.WriteLine("----------------------------------");
+                    Console.WriteLine("Jogo dos Dados");
+                    Console.WriteLine("----------------------------------");
 
-                Random geradorDeNumeros = new Random();
+                    Console.Write("Pressione ENTER para lançar o dado...");
+                    Console.ReadLine();
 
-                int resultado = geradorDeNumeros.Next(1, 7);
+                    Random geradorDeNumeros = new Random();
 
-                Console.WriteLine("----------------------------------");
-                Console.WriteLine($"O valor sorteado foi: {resultado}! número bonito.");
-                Console.WriteLine("----------------------------------");
+                    int resultado = geradorDeNumeros.Next(1, 7);
+
+                    Console.WriteLine("----------------------------------");
+                    Console.WriteLine($"O valor sorteado foi: {resultado}!");
+                    Console.WriteLine("----------------------------------");
+
+                    posicaoJogador += resultado;
+
+                    if (posicaoJogador >= limiteLinhaChegada)
+                    {
+                        jogoEmAndamento = false;
+
+                        Console.WriteLine("Parabéns! Você alcançou a linha de chegada!");
+                    }
+                    else
+                        Console.WriteLine($"Você está na posição: {posicaoJogador} de {limiteLinhaChegada}!");
+
+                    Console.WriteLine("----------------------------------");
+                    Console.ReadLine();
+                }
 
                 Console.Write("Deseja continuar? (s/N) ");
                 string opcaoContinuar = Console.ReadLine()!.ToUpper();
