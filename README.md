@@ -1,4 +1,5 @@
 # JogoDosDados
+Um jogo que fara você testar a sua sorte.
 
 # Entrada
 
