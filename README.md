@@ -12,7 +12,7 @@ mas você vai estar contra o computador, e tera eventos especiais para ficar mai
 - Adversário: é o Computador jogando contra você para ver quem ganha primeiro
 - Eventos Especiais: Nas Posições selecionadas hávera Eventos especiais que pode fazer você avançar ou recuar, e isso vale para o computador também.
 - Tabuleiro: o Jogo fala em que posição você e o Computador esta para o caminho da vitória.
-- Aleatório = Gera Número aleatórios como um dado de mesa, tanto para o Usuário quanto para o Computador.
+- Aleatório: Gera Número aleatórios como um dado de mesa, tanto para o Usuário quanto para o Computador.
   
 # Como Usar
 
